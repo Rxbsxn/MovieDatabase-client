@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Movies</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each movies as |movie|}}
+        <tr>
+          <th scope="row">{{movie.id}}</th>
+          <td>{{movie.name}}</td>
+          <td>{{movie.revenue}}</td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
