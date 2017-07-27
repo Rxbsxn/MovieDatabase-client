@@ -1,3 +1,28 @@
-<h1>Hello!</h1>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      {{link-to "Home" "index" class="navbar-brand"}}
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          {{link-to "Actors" "actors"}}
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-{{actor-list actors=model}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      {{outlet}}
+    </div>
+  </div>
+</div>
