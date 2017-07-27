@@ -11,12 +11,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
       {{#each actors as |actor|}}
-        <th scope="row">{{actor.id}}</th>
-        <td>{{actor.firstName}}</td>
-        <td>{{actor.lastName}}</td>
+        <tr>
+          <th scope="row">{{actor.id}}</th>
+          <td>{{actor.firstName}}</td>
+          <td>{{actor.lastName}}</td>
+        </tr>
       {{/each}}
-    </tr>
   </tbody>
 </table>
