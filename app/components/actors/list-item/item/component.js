@@ -1,4 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const { Component, computed } = Ember;
+
+export default Component.extend({
+  tagName: 'tr',
+
+  moviesArray: computed('actor.movies', function() {
+    return this.get('actor.movies');
+  })
 });

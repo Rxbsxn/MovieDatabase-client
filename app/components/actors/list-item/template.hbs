@@ -8,15 +8,12 @@
       <th>#</th>
       <th>First Name</th>
       <th>Last Name</th>
+      <th>Movies</th>
     </tr>
   </thead>
   <tbody>
       {{#each actors as |actor|}}
-        <tr>
-          <th scope="row">{{actor.id}}</th>
-          <td>{{actor.firstName}}</td>
-          <td>{{actor.lastName}}</td>
-        </tr>
+        {{actors/list-item/item actor=actor}}
       {{/each}}
   </tbody>
 </table>
