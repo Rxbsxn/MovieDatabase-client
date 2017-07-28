@@ -7,5 +7,5 @@ export default Component.extend({
 
   movie: computed('genre', function() {
     return this.get('genre.movies');
-  }),
+  })
 });

@@ -6,5 +6,5 @@ export default Model.extend({
   firstName: attr('string'),
   lastName: attr('string'),
 
-  movies: hasMany('movie'),
+  movies: hasMany('movie')
 });

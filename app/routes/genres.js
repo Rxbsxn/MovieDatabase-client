@@ -4,6 +4,6 @@ const { Route } = Ember;
 
 export default Route.extend({
   model() {
-    return this.get('store').findAll('genre')
+    return this.get('store').findAll('genre');
   }
 });

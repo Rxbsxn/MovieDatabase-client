@@ -6,6 +6,6 @@ export default Model.extend({
   name: attr('string'),
   revenue: attr('number'),
 
-  genre: belongsTo('genre'),
+  genre: belongsTo('genre')
 
 });
