@@ -7,14 +7,12 @@
     <tr>
       <th>#</th>
       <th>Name</th>
+      <th>Movies</th>
     </tr>
   </thead>
   <tbody>
       {{#each genres as |genre|}}
-        <tr>
-          <th scope="row">{{genre.id}}</th>
-          <td>{{genre.name}}</td>
-        </tr>
+        {{genres/list-item/item genre=genre}}
       {{/each}}
   </tbody>
 </table>
