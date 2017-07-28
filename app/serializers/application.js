@@ -1,4 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.JSONAPISerializer.extend({
+const { JSONAPISerializer } = DS;
+
+export default JSONAPISerializer.extend({
 });
