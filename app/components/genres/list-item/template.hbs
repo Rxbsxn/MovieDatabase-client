@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1>Genres</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each genres as |genre|}}
+        <tr>
+          <th scope="row">{{genre.id}}</th>
+          <td>{{genre.name}}</td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
