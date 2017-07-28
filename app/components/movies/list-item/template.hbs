@@ -8,15 +8,12 @@
       <th>#</th>
       <th>Name</th>
       <th>Revenue</th>
+      <th>Genre</th>
     </tr>
   </thead>
   <tbody>
       {{#each movies as |movie|}}
-        <tr>
-          <th scope="row">{{movie.id}}</th>
-          <td>{{movie.name}}</td>
-          <td>{{movie.revenue}}</td>
-        </tr>
+        {{movies/list-item/item movie=movie}}
       {{/each}}
   </tbody>
 </table>
