@@ -6,6 +6,6 @@ export default Component.extend({
   store: inject.service(),
 
   model: computed(function() {
-    return this.get('store').findAll('genre');
+    return this.get('store').query('genre', { include: 'movies' });
   })
 });
