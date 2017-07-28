@@ -5,7 +5,7 @@ const { Component, computed } = Ember;
 export default Component.extend({
   tagName: 'tr',
 
-  movie: computed('genre', function() {
+  movies: computed('genre', function() {
     return this.get('genre.movies');
   })
 });
