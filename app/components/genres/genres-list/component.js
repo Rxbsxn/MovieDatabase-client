@@ -7,5 +7,11 @@ export default Component.extend({
 
   model: computed(function() {
     return this.get('store').query('genre', { include: 'movies' });
-  })
+  }),
+
+  actions: {
+    removeGenre(genre) {
+      this.get('store').destroyRecord(genre);
+    }
+  }
 });

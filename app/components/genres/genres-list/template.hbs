@@ -12,7 +12,7 @@
   </thead>
   <tbody>
       {{#each model as |genre|}}
-        {{genres/genres-list/genre genre=genre}}
+        {{genres/genres-list/genre genre=genre removeGenre=(action "removeGenre")}}
       {{/each}}
   </tbody>
 </table>
