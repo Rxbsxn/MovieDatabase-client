@@ -11,7 +11,10 @@ export default Component.extend({
 
   actions: {
     removeGenre(genre) {
-      this.get('store').destroyRecord(genre);
+      this.get('store').findRecord('genre', genre.id, { reload: true }).then((genre) => {
+        genre.deleteRecord();
+        genre.save();
+      });
     }
   }
 });

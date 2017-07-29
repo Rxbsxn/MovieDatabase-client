@@ -2,6 +2,7 @@
   <h1>Genres</h1>
 </div>
 
+{{#each model as |genre|}}
 <table class="table">
   <thead>
     <tr>
@@ -11,8 +12,9 @@
     </tr>
   </thead>
   <tbody>
-      {{#each model as |genre|}}
-        {{genres/genres-list/genre genre=genre removeGenre=(action "removeGenre")}}
-      {{/each}}
+    {{genres/genres-list/genre genre=genre removeGenre=(action "removeGenre")}}
   </tbody>
 </table>
+{{else}}
+No genres found
+{{/each}}
