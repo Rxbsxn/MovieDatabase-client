@@ -9,11 +9,14 @@
       <th>Name</th>
       <th>Revenue</th>
       <th>Genre</th>
+      <th>Options</th>
     </tr>
   </thead>
   <tbody>
       {{#each movies as |movie|}}
-        {{movies/movies-list/movie movie=movie}}
+        {{movies/movies-list/movie movie=movie removeMovie=(action "removeMovie")}}
+      {{else}}
+        No movies found
       {{/each}}
   </tbody>
 </table>

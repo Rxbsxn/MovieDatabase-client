@@ -7,5 +7,11 @@ export default Component.extend({
 
   genre: computed('movie', function() {
     return this.get('movie.genre');
-  })
+  }),
+
+  actions: {
+    remove() {
+      this.get('removeMovie')(this.get('movie'));
+    }
+  }
 });
