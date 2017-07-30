@@ -13,7 +13,7 @@ export default Component.extend({
     submit() {
       let name = this.get('name');
       let revenue = this.get('revenue');
-      let genre = this.get('selectedGenre');
+      let genre = this.get('genre');
 
       this.get('store').createRecord('movie', { name, revenue, genre }, { reload: true }).save(' ');
     },
