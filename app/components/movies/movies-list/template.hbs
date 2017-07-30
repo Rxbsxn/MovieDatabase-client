@@ -2,6 +2,22 @@
   <h1>Movies</h1>
 </div>
 
+{{#bs-button active=notCollapsed onClick=(action "toggle")}}
+  {{#if collapsed}}
+    Add new movie
+  {{else}}
+    Cancel
+  {{/if}}
+{{/bs-button}}
+
+<hr>
+
+{{#bs-collapse collapsed=collapsed}}
+  {{movies/movies-list/new}}
+{{/bs-collapse}}
+
+
+
 <table class="table">
   <thead>
     <tr>
