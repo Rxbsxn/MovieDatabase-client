@@ -1,6 +1,10 @@
 {{#bs-form formLayout=formLayout model=this onSubmit=(action "submit") as |form|}}
   {{form.element controlType="name" label="Name" placeholder="Movie name" property="name" required=true}}
   {{form.element controlType="number" label="Revenue" placeholder="Movie revenue" property="revenue" required=true}}
-  {{form.element controlType="power-select" property="genre" label="Choose genre" options=genres optionLabelPath="name"}}
+  {{#form.element controlType="power-select" property="genre" label="Choose genre" options=genres optionLabelPath="name" as |el|}}
+    {{#el.control searchField="name" searchPlaceholder="Type your name" as |item|}}
+      {{item.name}}
+    {{/el.control}}
+  {{/form.element}}
   {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
 {{/bs-form}}
