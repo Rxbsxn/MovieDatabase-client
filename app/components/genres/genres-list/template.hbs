@@ -16,7 +16,6 @@
   {{genres/genres-list/new toggleAdding=(action 'toggleAdding')}}
 {{/bs-collapse}}
 
-{{#each model as |genre|}}
 <table class="table">
   <thead>
     <tr>
@@ -27,9 +26,10 @@
     </tr>
   </thead>
   <tbody>
+  {{#each model as |genre|}}
     {{genres/genres-list/genre genre=genre removeGenre=(action "removeGenre")}}
+  {{else}}
+    No genres found
+  {{/each}}
   </tbody>
 </table>
-{{else}}
-No genres found
-{{/each}}
