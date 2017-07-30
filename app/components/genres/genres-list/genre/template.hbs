@@ -2,6 +2,7 @@
 <td>{{genre.name}}</td>
 <td>{{movies.length}}</td>
 <td>
-  <button class="btn btn-danger" {{action "remove"}}>Delete</button>
+    {{#bs-button type="danger" onClick=(action "remove")}}Delete{{/bs-button}}
+
 </td>
 
