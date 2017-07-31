@@ -27,7 +27,7 @@
     </tr>
   </thead>
   <tbody>
-      {{#each movies as |movie|}}
+      {{#each model as |movie|}}
         {{movies/movies-list/movie movie=movie removeMovie=(action "removeMovie")}}
       {{else}}
         No movies found

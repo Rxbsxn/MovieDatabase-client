@@ -9,6 +9,10 @@ export default Component.extend({
     return this.get('store').findAll('genre');
   }),
 
+  model: computed(function() {
+    return this.get('store').query('movie', { include: 'genre' });
+  }),
+
   actions: {
     submit() {
       let name = this.get('name');

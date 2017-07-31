@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
-const { Component, inject } = Ember;
+const { Component, computed, inject } = Ember;
 
 export default Component.extend({
   store: inject.service(),
   collapsed: true,
+
+  model: computed(function() {
+    return this.get('store').query('actor', { include: 'movies' });
+  }),
 
   actions: {
     removeActor(actor) {
