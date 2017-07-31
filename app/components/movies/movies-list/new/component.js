@@ -15,7 +15,7 @@ export default Component.extend({
       let revenue = this.get('revenue');
       let genre = this.get('genre');
 
-      this.get('store').createRecord('movie', { name, revenue, genre }, { reload: true }).save(' ');
+      this.get('store').createRecord('movie', { name, revenue, genre }).save();
       this.get('toggle')();
     },
 
