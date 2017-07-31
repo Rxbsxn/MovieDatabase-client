@@ -16,6 +16,7 @@ export default Component.extend({
       let genre = this.get('genre');
 
       this.get('store').createRecord('movie', { name, revenue, genre }, { reload: true }).save(' ');
+      this.get('toggle')();
     },
 
     chooseGenre(genre) {
