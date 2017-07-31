@@ -26,7 +26,7 @@
     </tr>
   </thead>
   <tbody>
-      {{#each model as |actor|}}
+      {{#each modelSorted as |actor|}}
         {{actors/actors-list/actor actor=actor removeActor=(action "removeActor")}}
       {{/each}}
   </tbody>

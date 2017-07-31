@@ -5,9 +5,12 @@ const { Component, computed, inject } = Ember;
 export default Component.extend({
   store: inject.service(),
   collapsed: true,
+  sortField: ['firstName'],
+
+  modelSorted: computed.sort('model', 'sortField'),
 
   model: computed(function() {
-    return this.get('store').query('actor', { include: 'movies' });
+    return this.get('store').findAll('actor', { include: 'movies' });
   }),
 
   actions: {

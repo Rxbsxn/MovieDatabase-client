@@ -6,9 +6,12 @@ export default Component.extend({
   store: inject.service(),
   routing: inject.service('-routing'),
   collapsed: true,
+  sortField: ['name'],
+
+  modelSorted: computed.sort('model', 'sortField'),
 
   model: computed('store', function() {
-    return this.get('store').query('genre', { include: 'movies' });
+    return this.get('store').findAll('genre', { include: 'movies' });
   }),
 
   actions: {
