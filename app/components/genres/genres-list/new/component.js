@@ -9,7 +9,7 @@ export default Component.extend({
   actions: {
     submit() {
       let name = this.get('name');
-      this.get('store').createRecord('genre', { name }, { reload: true })
+      this.get('store').createRecord('genre', { name })
       .save();
       this.get('toggleAdding')();
     }

@@ -4,6 +4,7 @@ const { Component, inject } = Ember;
 
 export default Component.extend({
   store: inject.service(),
+  collapsed: true,
 
   actions: {
     removeActor(actor) {
@@ -11,6 +12,10 @@ export default Component.extend({
         genre.deleteRecord();
         genre.save();
       });
+    },
+
+    toggle() {
+      this.toggleProperty('collapsed');
     }
   }
 });

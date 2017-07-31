@@ -1,0 +1,15 @@
+{{#bs-form formLayout=formLayout model=this onSubmit=(action "submit") as |form|}}
+  {{form.element controlType="name" label="First name" placeholder="First name" property="firstName" required=true}}
+  {{form.element controlType="name" label="Last name" placeholder="Last name" property="lastName" required=true}}
+
+  {{#power-select-multiple
+  options=movies
+  selected=selectedMovies
+  placeholder="Select some movies..."
+  onchange=(action (mut selectedMovies))
+  as |movie|
+}}
+  {{movie.name}}
+{{/power-select-multiple}}
+  {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+{{/bs-form}}
