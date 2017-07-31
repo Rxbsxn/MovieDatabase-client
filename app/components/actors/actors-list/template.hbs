@@ -13,7 +13,7 @@
   </thead>
   <tbody>
       {{#each actors as |actor|}}
-        {{actors/actors-list/actor actor=actor}}
+        {{actors/actors-list/actor actor=actor removeActor=(action "removeActor")}}
       {{/each}}
   </tbody>
 </table>

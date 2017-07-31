@@ -7,5 +7,11 @@ export default Component.extend({
 
   moviesArray: computed('actor.movies', function() {
     return this.get('actor.movies');
-  })
+  }),
+
+  actions: {
+    remove() {
+      this.get('removeActor')(this.get('actor'));
+    }
+  }
 });

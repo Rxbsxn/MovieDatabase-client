@@ -2,3 +2,6 @@
 <td>{{actor.firstName}}</td>
 <td>{{actor.lastName}}</td>
 <td>{{actors/actors-list/actor/movies movies=moviesArray}}</td>
+<td>
+  {{#bs-button type="danger" onClick=(action "remove")}}Delete{{/bs-button}}
+</td>
